@@ -15,7 +15,7 @@ class CreateTodoTable extends Migration
     {
         Schema::create('todo', function (Blueprint $table) {
             $table->id();
-            $table->varchar('content');
+            $table->ipAddress('content',191);
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });
